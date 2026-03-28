@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Blue Deployment</title>
+    <style>
+        body {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            font-family: Arial;
+        }
+        header {
+            font-size: 32px;
+            margin-top: 20px;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #0056b3;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Blue Deployment
+</header>
+
+<h2 th:text="${message}"></h2>
+
+<footer>
+    Created by sujithbiswas
+</footer>
+
+</body>
+</html>
