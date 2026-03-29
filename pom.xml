@@ -48,6 +48,14 @@
 
     <build>
     <plugins>
+
+        <!-- ✅ Spring Boot Plugin (REQUIRED) -->
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+
+        <!-- Your existing compiler plugin -->
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
@@ -56,6 +64,7 @@
                 <release>17</release>
             </configuration>
         </plugin>
+
     </plugins>
     </build>
 
