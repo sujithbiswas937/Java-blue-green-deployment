@@ -5,6 +5,11 @@ pipeline {
     maven 'Maven'
     }
 
+    tools {
+    jdk 'JDK21'
+    maven 'Maven'
+    }
+
     environment {
         REPO_URL = 'https://github.com/sujithbiswas937/Java-blue-green-deployment.git'
         BRANCH = 'main'
