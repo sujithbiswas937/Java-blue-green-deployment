@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+    maven 'Maven'
+    }
+
     environment {
         REPO_URL = 'https://github.com/sujithbiswas937/Java-blue-green-deployment.git'
         BRANCH = 'main'
