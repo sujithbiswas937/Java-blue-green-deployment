@@ -2,24 +2,15 @@ pipeline {
     agent any
 
     tools {
-    maven 'Maven'
-    }
-
-    tools {
-    jdk 'JDK21'
-    maven 'Maven'
-    }
-
-    environment {
-        REPO_URL = 'https://github.com/sujithbiswas937/Java-blue-green-deployment.git'
-        BRANCH = 'main'
+        jdk 'JDK21'
+        maven 'Maven'
     }
 
     stages {
 
-        stage('Checkout') {
+        stage('Verify Java') {
             steps {
-                git branch: "${BRANCH}", url: "${REPO_URL}"
+                sh 'java -version'
             }
         }
 
