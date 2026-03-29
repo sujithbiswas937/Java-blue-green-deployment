@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        jdk 'JDK21'
+        jdk 'jdk17'
         maven 'Maven'
     }
 
@@ -11,6 +11,7 @@ pipeline {
         stage('Verify Java') {
             steps {
                 sh 'java -version'
+                sh 'echo $JAVA_HOME'
             }
         }
 
