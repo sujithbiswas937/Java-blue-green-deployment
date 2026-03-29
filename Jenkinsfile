@@ -14,6 +14,13 @@ pipeline {
             }
         }
 
+        stage('Debug Java & Maven') {
+    steps {
+        sh 'java -version'
+        sh 'mvn -version'
+            }
+        }
+
         stage('Build') {
             steps {
                 sh 'mvn clean package'
